@@ -6,13 +6,11 @@
 #   True
 
 def reverse(input_str: str) -> str:
-    if len(input_str) >= 1:
-        print(input_str[::-1])
-        return True
-    else:
-        return False
+    if input_str == "":
+        return input_str
+    if len(input_str) == 1:
+        return input_str
+    return reverse(input_str[1:]) + input_str[0]
 
 
-print(reverse("python"))
-print(reverse('o'))
-print(reverse(''))
+assert reverse("hello") == "olleh"

@@ -4,11 +4,12 @@
 #    >>> sum_of_digits('test')
 #   ValueError("input string must be digit string")
 
-import functools
+def sum_of_digit(digit_string):
+    if len(digit_string) == 1:
+        return int(digit_string)
+    if not digit_string:
+        return 0
+    return int(digit_string[0]) + sum_of_digit(digit_string[1:])
 
-n = list(input())
-n = [int(digit) for digit in n]
-suma = sum(n)
 
-print("Cумма:", suma)
-
+assert sum_of_digit('123') == 6
