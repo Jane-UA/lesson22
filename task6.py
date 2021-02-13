@@ -6,10 +6,10 @@ def long_dig(a):
 
 
 def mix_integer(a):
-    eger = a % 10
+    edge = a % 10
     res = a // 10
     step = long_dig(res)
-    return 10 ** step * eger + res
+    return 10 ** step * edge + res
 
 assert mix_integer(506) == 650
 assert mix_integer(1200) == 120
